@@ -425,11 +425,61 @@
             100% { transform: scale(2.2); opacity: 0; }
         }
 
-        /* Navbar Actions (Theme Switcher + Modal Trigger) */
+        /* Navbar Actions (Theme Switcher + Modal Trigger + Repositorio GitHub) */
         .navbar-actions {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+        }
+
+        .btn-nav-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.18) 0%, rgba(124, 58, 237, 0.22) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: var(--primary-light);
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.18);
+        }
+
+        .btn-nav-github:hover {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-color: #a5b4fc;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(99, 102, 241, 0.45);
+        }
+
+        .btn-nav-github .github-icon {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+
+        .btn-nav-github:hover .github-icon {
+            transform: scale(1.15);
+        }
+
+        .btn-nav-github .external-arrow {
+            width: 12px;
+            height: 12px;
+            opacity: 0.75;
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-nav-github:hover .external-arrow {
+            transform: translate(1px, -1px);
+            opacity: 1;
         }
 
         .btn-nav-author {
@@ -602,7 +652,68 @@
             font-size: 1.05rem;
             color: var(--text-sub);
             line-height: 1.65;
-            margin-bottom: 26px;
+            margin-bottom: 22px;
+        }
+
+        /* Hero Call to Actions (Botón Repositorio GitHub & Quiz) */
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .hero-btn-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px 22px;
+            border-radius: 14px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(135deg, #6366f1 0%, #7c3aed 100%);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .hero-btn-github:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(99, 102, 241, 0.55);
+            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%);
+            color: #ffffff;
+        }
+
+        .hero-btn-github .github-icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .hero-btn-quiz {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 14px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--text-main);
+            background: var(--btn-secondary-bg);
+            border: 1px solid var(--btn-secondary-border);
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .hero-btn-quiz:hover {
+            background: var(--btn-secondary-hover-bg);
+            border-color: var(--accent-primary);
+            color: var(--primary-light);
+            transform: translateY(-2px);
         }
 
         /* Tech Metrics Strip */
@@ -1248,7 +1359,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 16px;
             font-size: 0.88rem;
             color: var(--text-sub);
         }
@@ -1260,6 +1371,36 @@
         .footer-credits {
             font-size: 0.82rem;
             opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        .footer-github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.28);
+            color: var(--primary-light);
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .footer-github-link:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-secondary);
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+        }
+
+        .footer-github-link .github-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
         }
 
         /* 4. MODAL POP-UP INICIAL DE AUTORÍA */
@@ -1400,6 +1541,32 @@
             background: var(--btn-primary-hover-bg);
         }
 
+        .modal-btn-github {
+            width: 100%;
+            margin-top: 12px;
+            padding: 14px 24px;
+            border-radius: 16px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.35);
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .modal-btn-github:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-secondary);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+        }
+
         @keyframes cardEntrance {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -1429,6 +1596,22 @@
             .navbar-content {
                 padding: 12px 18px;
                 flex-wrap: wrap;
+            }
+
+            .navbar-actions {
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .btn-nav-github,
+            .btn-nav-author,
+            .theme-toggle-btn {
+                flex: 1 1 auto;
+                justify-content: center;
+                padding: 8px 10px;
+                font-size: 0.78rem;
             }
 
             .status-pill {
@@ -1497,8 +1680,18 @@
                 <span>Servidor Flask Activo (Puerto 5000)</span>
             </div>
 
-            <!-- Botones de Control: Ficha de Autor & Toggle Modo Claro/Oscuro -->
+            <!-- Botones de Control: Repositorio GitHub, Ficha de Autor & Toggle Modo Claro/Oscuro -->
             <div class="navbar-actions">
+                <a class="btn-nav-github" href="https://github.com/Juan112021/mi_parcial_juanes" target="_blank" rel="noopener noreferrer" title="Ir al repositorio propio en GitHub">
+                    <svg class="github-icon" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>Repositorio GitHub</span>
+                    <svg class="external-arrow" viewBox="0 0 24 24">
+                        <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                    </svg>
+                </a>
+
                 <button class="btn-nav-author" onclick="openModal()" type="button" title="Ver ficha del estudiante">
                     <svg fill="currentColor" height="16" viewBox="0 0 24 24" width="16">
                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
@@ -1529,7 +1722,7 @@
                 <!-- Hero Showcase Card -->
                 <article class="hero-showcase-card">
                     <div class="academic-chip">
-                        <span>⚡ Ingeniería de Software II • Evaluación Práctica</span>
+                        <span>[ISW-II] Ingeniería de Software II • Evaluación Práctica</span>
                     </div>
 
                     <div class="hero-title-box">
@@ -1544,6 +1737,25 @@
                     </div>
 
                     <p class="hero-subtitle">Tu aplicación en Python está conectada, modularizada y optimizada para ofrecer una experiencia reactiva de alto impacto visual y pedagógico.</p>
+
+                    <!-- Acciones del Hero: Botón al Repositorio Propio y Quiz -->
+                    <div class="hero-cta-group">
+                        <a class="hero-btn-github" href="https://github.com/Juan112021/mi_parcial_juanes" target="_blank" rel="noopener noreferrer" title="Ir al repositorio oficial en GitHub">
+                            <svg class="github-icon" viewBox="0 0 24 24">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                            </svg>
+                            <span>Repositorio en GitHub</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                            </svg>
+                        </a>
+                        <a class="hero-btn-quiz" href="#quiz-section" title="Iniciar evaluación interactiva">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span>Realizar Quiz</span>
+                        </a>
+                    </div>
 
                     <!-- Métricas Técnicas del Stack -->
                     <div class="tech-metrics-strip">
@@ -1710,8 +1922,16 @@
     <!-- 3. FOOTER DEL PORTAL -->
     <footer class="portal-footer">
         <div class="footer-content">
-            <p class="footer-author">Desarrollado y adaptado por <strong>Juan Esteban Ospina Zapata</strong> • Corporación Universitaria Lasallista</p>
-            <p class="footer-credits">Proyecto base: Ing. Feibert Alirio Guzmán Pérez • 2026</p>
+            <div class="footer-info">
+                <p class="footer-author">Desarrollado y adaptado por <strong>Juan Esteban Ospina Zapata</strong> • Corporación Universitaria Lasallista</p>
+                <p class="footer-credits">Proyecto base: Ing. Feibert Alirio Guzmán Pérez • 2026</p>
+            </div>
+            <a class="footer-github-link" href="https://github.com/Juan112021/mi_parcial_juanes" target="_blank" rel="noopener noreferrer" title="Ir al repositorio en GitHub">
+                <svg class="github-icon" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Repositorio GitHub</span>
+            </a>
         </div>
     </footer>
 
@@ -1729,7 +1949,7 @@
                 </svg>
             </div>
             <div class="modal-badge-pill">
-                <span>⚡ Ingeniería de Software II</span>
+                <span>[ISW-II] Ingeniería de Software II</span>
             </div>
             <h2 class="modal-title" id="modalTitle">Desarrollado por Juan Esteban Ospina Zapata</h2>
             <p class="modal-desc">Corporación Universitaria Lasallista • Proyecto de Arquitectura de Software &amp; Despliegue Flask. Bienvenido a la experiencia interactiva.</p>
@@ -1739,6 +1959,15 @@
                     <path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"></path>
                 </svg>
             </button>
+            <a class="modal-btn-github" href="https://github.com/Juan112021/mi_parcial_juanes" target="_blank" rel="noopener noreferrer" title="Ir al repositorio en GitHub">
+                <svg class="github-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Ver Repositorio Propio en GitHub</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                </svg>
+            </a>
         </div>
     </div>
 
