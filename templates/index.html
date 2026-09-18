@@ -225,6 +225,420 @@
             }
         }
 
+        /* Tarjeta Creativa de Autor */
+        .author-card {
+            margin: 36px auto 44px auto;
+            background: linear-gradient(135deg, rgba(82, 183, 136, 0.15), rgba(27, 67, 50, 0.4));
+            border: 1px solid rgba(149, 213, 178, 0.35);
+            border-radius: 20px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            text-align: left;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .author-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 36px rgba(82, 183, 136, 0.2);
+            border-color: var(--accent-sage);
+        }
+
+        .author-badge-glow {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent-green), #2d6a4f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 6px 18px rgba(82, 183, 136, 0.4);
+        }
+
+        .author-icon {
+            width: 30px;
+            height: 30px;
+            fill: #ffffff;
+        }
+
+        .author-details {
+            flex-grow: 1;
+        }
+
+        .author-pill {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+        }
+
+        .author-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+            margin: 0 0 4px 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .author-subtext {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Sección del Quiz Interactivo */
+        .quiz-wrapper {
+            margin-top: 48px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            text-align: center;
+        }
+
+        .quiz-chip {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(233, 196, 106, 0.18);
+            border: 1px solid rgba(233, 196, 106, 0.45);
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .quiz-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .quiz-desc {
+            color: var(--text-sub);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .quiz-card {
+            background: rgba(11, 43, 26, 0.55);
+            border: 1px solid rgba(149, 213, 178, 0.25);
+            border-radius: 24px;
+            padding: 32px 28px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        .quiz-question-box {
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 18px;
+        }
+
+        .question-number {
+            display: inline-block;
+            color: var(--accent-sage);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .question-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .quiz-option {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.96rem;
+            line-height: 1.45;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: left;
+            width: 100%;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: var(--accent-sage);
+            transform: translateX(4px);
+        }
+
+        .option-prefix {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--accent-sage);
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .option-text {
+            flex-grow: 1;
+        }
+
+        .option-indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            flex-shrink: 0;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        /* Estado Seleccionado */
+        .quiz-option.selected {
+            background: rgba(82, 183, 136, 0.18);
+            border-color: var(--accent-green);
+            box-shadow: 0 0 16px rgba(82, 183, 136, 0.3);
+        }
+
+        .quiz-option.selected .option-prefix {
+            background: var(--accent-green);
+            color: #0b2b1a;
+        }
+
+        .quiz-option.selected .option-indicator {
+            border-color: var(--accent-green);
+            background: var(--accent-green);
+        }
+
+        /* Estado Correcto */
+        .quiz-option.is-correct {
+            background: rgba(46, 196, 182, 0.25) !important;
+            border-color: #2ec4b6 !important;
+            box-shadow: 0 0 20px rgba(46, 196, 182, 0.4) !important;
+        }
+
+        .quiz-option.is-correct .option-prefix {
+            background: #2ec4b6 !important;
+            color: #032b28 !important;
+        }
+
+        /* Estado Incorrecto */
+        .quiz-option.is-incorrect {
+            background: rgba(230, 57, 70, 0.25) !important;
+            border-color: #e63946 !important;
+            box-shadow: 0 0 20px rgba(230, 57, 70, 0.4) !important;
+        }
+
+        .quiz-option.is-incorrect .option-prefix {
+            background: #e63946 !important;
+            color: #ffffff !important;
+        }
+
+        /* Estado Revelado (cuando el usuario falló) */
+        .quiz-option.is-revealed {
+            border: 1.5px dashed var(--accent-green) !important;
+            background: rgba(82, 183, 136, 0.12) !important;
+        }
+
+        /* Botones de Acción */
+        .quiz-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-quiz {
+            padding: 14px 26px;
+            border-radius: 14px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s ease;
+            border: none;
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-green), #2d6a4f);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(82, 183, 136, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(82, 183, 136, 0.45);
+            background: linear-gradient(135deg, #74c69d, #2d6a4f);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-sub);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.14);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Retroalimentación Dinámica */
+        .quiz-feedback {
+            margin-top: 24px;
+            padding: 22px;
+            border-radius: 16px;
+            animation: slideUp 0.4s ease-out;
+            border: 1px solid;
+            text-align: left;
+        }
+
+        .quiz-feedback.hidden {
+            display: none;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feedback-badge {
+            display: inline-block;
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 8px;
+        }
+
+        .feedback-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .feedback-message {
+            font-size: 0.94rem;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .feedback-correct {
+            background: rgba(46, 196, 182, 0.15);
+            border-color: rgba(46, 196, 182, 0.5);
+            color: #e0fbf7;
+        }
+
+        .feedback-correct .feedback-badge {
+            background: #2ec4b6;
+            color: #032b28;
+        }
+
+        .feedback-correct .feedback-title {
+            color: #70e4d7;
+        }
+
+        .feedback-incorrect {
+            background: rgba(230, 57, 70, 0.15);
+            border-color: rgba(230, 57, 70, 0.5);
+            color: #fde8ea;
+        }
+
+        .feedback-incorrect .feedback-badge {
+            background: #e63946;
+            color: #ffffff;
+        }
+
+        .feedback-incorrect .feedback-title {
+            color: #ff99a8;
+        }
+
+        .feedback-warning {
+            background: rgba(233, 196, 106, 0.15);
+            border-color: rgba(233, 196, 106, 0.5);
+            color: #fff9e6;
+        }
+
+        .feedback-warning .feedback-badge {
+            background: #e9c46a;
+            color: #2b2100;
+        }
+
+        .feedback-warning .feedback-title {
+            color: #ffd675;
+        }
+
+        /* Pie de Página */
+        .footer-section {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.92rem;
+            color: var(--text-sub);
+        }
+
+        .footer-author {
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--primary-light);
+        }
+
+        .footer-credits {
+            font-size: 0.8rem;
+            opacity: 0.75;
+            margin: 0;
+        }
+
         /* Responsivo */
         @media (max-width: 600px) {
             .container {
@@ -311,9 +725,163 @@
 
             </div>
 
+        <!-- Sección Creativa de Autor: Juan Esteban Ospina Zapata -->
+        <div class="author-card">
+            <div class="author-badge-glow">
+                <svg class="author-icon" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </div>
+            <div class="author-details">
+                <span class="author-pill">Desarrollador &bull; Ingeniería de Software II</span>
+                <h2 class="author-title">Juan Esteban Ospina Zapata</h2>
+                <p class="author-subtext">Corporación Universitaria Lasallista &bull; Evaluación Práctica: Arquitectura y Despliegue</p>
+            </div>
         </div>
-        <p align="center">Creado por Feibert Alirio Guzmán Pérez</p>
+
+        <!-- Módulo de Quiz Interactivo sobre Arquitecturas de Software -->
+        <section class="quiz-wrapper" id="quiz-section">
+            <div class="quiz-header">
+                <span class="quiz-chip">Evaluación Interactiva</span>
+                <h2 class="quiz-title">Quiz: Stack & Arquitecturas de Software</h2>
+                <p class="quiz-desc">Pon a prueba tus conocimientos sobre estilos arquitectónicos y patrones de diseño trabajados en clase.</p>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-question-box">
+                    <span class="question-number">Pregunta 1 de 1</span>
+                    <h3 class="question-text">¿Cuál es la principal característica del patrón de Arquitectura Hexagonal (Puertos y Adaptadores)?</h3>
+                </div>
+
+                <div class="quiz-options" id="quiz-options">
+                    <button type="button" class="quiz-option" data-index="0" onclick="selectOption(0)">
+                        <span class="option-prefix">A</span>
+                        <span class="option-text">Separar el núcleo del negocio (dominio) de los detalles tecnológicos externos mediante interfaces (puertos) e implementaciones concretas (adaptadores).</span>
+                        <span class="option-indicator"></span>
+                    </button>
+
+                    <button type="button" class="quiz-option" data-index="1" onclick="selectOption(1)">
+                        <span class="option-prefix">B</span>
+                        <span class="option-text">Acoplar estrictamente la interfaz de usuario con la base de datos para reducir la cantidad de capas y controladores.</span>
+                        <span class="option-indicator"></span>
+                    </button>
+
+                    <button type="button" class="quiz-option" data-index="2" onclick="selectOption(2)">
+                        <span class="option-prefix">C</span>
+                        <span class="option-text">Organizar el sistema en exactamente 6 capas físicas secuenciales obligatorias de comunicación síncrona.</span>
+                        <span class="option-indicator"></span>
+                    </button>
+
+                    <button type="button" class="quiz-option" data-index="3" onclick="selectOption(3)">
+                        <span class="option-prefix">D</span>
+                        <span class="option-text">Prescindir por completo del uso de controladores y frameworks web en el backend.</span>
+                        <span class="option-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="quiz-actions">
+                    <button type="button" id="btn-submit-quiz" class="btn-quiz btn-primary" onclick="evaluateQuiz()">
+                        <svg viewBox="0 0 24 24" class="btn-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        Comprobar Respuesta
+                    </button>
+                    <button type="button" id="btn-reset-quiz" class="btn-quiz btn-secondary" onclick="resetQuiz()">
+                        <svg viewBox="0 0 24 24" class="btn-icon"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+                        Reiniciar
+                    </button>
+                </div>
+
+                <!-- Mensaje de Retroalimentación Dinámica -->
+                <div id="quiz-feedback" class="quiz-feedback hidden">
+                    <div class="feedback-badge" id="feedback-badge"></div>
+                    <h4 class="feedback-title" id="feedback-title"></h4>
+                    <p class="feedback-message" id="feedback-message"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de página con créditos de autoría -->
+        <footer class="footer-section">
+            <p class="footer-author">Desarrollado y adaptado por <strong>Juan Esteban Ospina Zapata</strong></p>
+            <p class="footer-credits">Proyecto base: Ing. Feibert Alirio Guzmán Pérez &bull; 2026</p>
+        </footer>
     </div>
+
+    <!-- Script de Lógica del Quiz Interactivo -->
+    <script>
+        const CORRECT_OPTION_INDEX = 0;
+        let selectedOptionIndex = null;
+        let isSubmitted = false;
+
+        function selectOption(index) {
+            if (isSubmitted) return; // Bloquea cambios tras comprobar hasta reiniciar
+            selectedOptionIndex = index;
+            
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach((opt, idx) => {
+                if (idx === index) {
+                    opt.classList.add('selected');
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+
+            // Ocultar mensaje previo de validación si existía
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.className = 'quiz-feedback hidden';
+        }
+
+        function evaluateQuiz() {
+            if (selectedOptionIndex === null) {
+                const feedback = document.getElementById('quiz-feedback');
+                const badge = document.getElementById('feedback-badge');
+                const title = document.getElementById('feedback-title');
+                const message = document.getElementById('feedback-message');
+
+                feedback.className = 'quiz-feedback feedback-warning';
+                badge.textContent = 'Selección requerida';
+                title.textContent = '¡Por favor selecciona una respuesta!';
+                message.textContent = 'Haz clic sobre una de las 4 opciones antes de comprobar el resultado.';
+                feedback.classList.remove('hidden');
+                return;
+            }
+
+            isSubmitted = true;
+            const options = document.querySelectorAll('.quiz-option');
+            const feedback = document.getElementById('quiz-feedback');
+            const badge = document.getElementById('feedback-badge');
+            const title = document.getElementById('feedback-title');
+            const message = document.getElementById('feedback-message');
+
+            if (selectedOptionIndex === CORRECT_OPTION_INDEX) {
+                options[selectedOptionIndex].classList.add('is-correct');
+                feedback.className = 'quiz-feedback feedback-correct';
+                badge.textContent = '¡Respuesta Correcta!';
+                title.textContent = '¡Excelente, Juan Esteban!';
+                message.textContent = 'Has identificado con precisión la esencia de la Arquitectura Hexagonal. Su objetivo primordial es desacoplar las reglas de negocio del mundo exterior (APIs, bases de datos, librerías y frameworks) a través de Puertos (contratos/interfaces) y Adaptadores (implementaciones), logrando un sistema altamente testeable, modular y mantenible.';
+            } else {
+                options[selectedOptionIndex].classList.add('is-incorrect');
+                options[CORRECT_OPTION_INDEX].classList.add('is-revealed');
+                feedback.className = 'quiz-feedback feedback-incorrect';
+                badge.textContent = 'Respuesta Incorrecta';
+                title.textContent = '¡Casi lo logras!';
+                message.textContent = 'La respuesta correcta es la opción A. Recuerda que la Arquitectura Hexagonal NO acopla capas ni se limita a 6 niveles físicos; su verdadero propósito es crear un hexágono donde el centro es el dominio puro, comunicado con el exterior exclusivamente mediante puertos y adaptadores.';
+            }
+
+            feedback.classList.remove('hidden');
+            feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function resetQuiz() {
+            selectedOptionIndex = null;
+            isSubmitted = false;
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.className = 'quiz-option';
+            });
+            const feedback = document.getElementById('quiz-feedback');
+            feedback.className = 'quiz-feedback hidden';
+        }
+    </script>
 
 </body>
 
