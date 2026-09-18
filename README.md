@@ -1,4 +1,4 @@
-# Proyecto Flask - Aplicación Web & Módulo de Evaluación Interactiva
+# Proyecto Flask - Aplicacion Web & Modulo de Evaluacion Interactiva
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.1.3-000000?style=for-the-badge&logo=flask&logoColor=white)
@@ -6,22 +6,37 @@
 ![HTML5](https://img.shields.io/badge/HTML5-Semantico-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Render](https://img.shields.io/badge/Render-Cloud_Deploy-46E3B7?style=for-the-badge&logo=render&logoColor=white)
-![Git](https://img.shields.io/badge/Git-VCS-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Render](https://img.shields.io/badge/Render-Online_Deploy-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+![Pull Request](https://img.shields.io/badge/Pull_Request-%233_Abierto-2ea44f?style=for-the-badge&logo=github&logoColor=white)
 ![Licencia](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Aplicación web moderna, responsiva y modular desarrollada con **Python** y **Flask**, construida y enriquecida como parte de la evaluación práctica de **Ingeniería de Software II** de la **Corporación Universitaria Lasallista**. Integra una arquitectura visual contemporánea tipo **Dashboard Dual-Column**, conmutador dinámico de **Modo Claro / Modo Oscuro** con persistencia en `localStorage`, efectos de cristal esmerilado (*glassmorphism*), orbes ambientales en movimiento, pop-up modal inicial de autoría y un módulo evaluativo interactivo tipo Quiz enfocado en **Stack y Arquitectura Hexagonal**.
+Aplicacion web moderna, responsiva y modular desarrollada con **Python** y **Flask**, construida y enriquecida como parte de la evaluacion practica de **Ingenieria de Software II** de la **Corporacion Universitaria Lasallista**. Integra una arquitectura visual contemporanea tipo **Dashboard Dual-Column**, conmutador dinamico de **Modo Claro / Modo Oscuro** con persistencia en `localStorage`, efectos de cristal esmerilado (*glassmorphism*), orbes ambientales en movimiento, ventana modal inicial de autoria y un modulo evaluativo interactivo de 5 preguntas sobre **Stack Tecnologico y Arquitectura Hexagonal**.
 
 ---
 
-## Información del Estudiante y Autoría
+## Enlaces Oficiales de la Entrega
+
+| Recurso / Entrega | Descripcion | Enlace Directo |
+| :--- | :--- | :--- |
+| **Despliegue en la Nube (Render)** | Aplicacion web en vivo con certificado SSL | [https://mi-parcial-juanes.onrender.com/](https://mi-parcial-juanes.onrender.com/) |
+| **Repositorio Personal (GitHub Fork)** | Codigo fuente completo y ramas de trabajo | [https://github.com/Juan112021/mi_parcial_juanes](https://github.com/Juan112021/mi_parcial_juanes) |
+| **Pull Request Oficial de Entrega** | Solicitud de incorporacion **PR #3** en el repositorio base | [https://github.com/g3in-unilasallista/mi_proyecto_python/pull/3](https://github.com/g3in-unilasallista/mi_proyecto_python/pull/3) |
+| **Repositorio Base Original** | Repositorio institucional de la asignatura | [https://github.com/g3in-unilasallista/mi_proyecto_python](https://github.com/g3in-unilasallista/mi_proyecto_python) |
+
+> [!NOTE]
+> La aplicacion desplegada en Render sincroniza de forma continua con la rama `main` del repositorio `Juan112021/mi_parcial_juanes`, asegurando que cualquier actualizacion se refleje de manera inmediata en produccion.
+
+---
+
+## Informacion del Estudiante y Autoria
 
 - **Estudiante y Desarrollador:** Juan Esteban Ospina Zapata
-- **Programa Académico:** Ingeniería Informática / Ingeniería de Software II
-- **Institución:** Corporación Universitaria Lasallista
-- **Repositorio Fork (Trabajo del Estudiante):** [Juan112021/mi_parcial_juanes](https://github.com/Juan112021/mi_parcial_juanes)
-- **Repositorio Base Original:** [g3in-unilasallista/mi_proyecto_python](https://github.com/g3in-unilasallista/mi_proyecto_python)
-- **Docente / Crédito del Proyecto Base:** Ing. Feibert Alirio Guzmán Pérez (2026)
+- **Programa Academico:** Ingenieria Informatica / Ingenieria de Software II
+- **Institucion:** Corporacion Universitaria Lasallista
+- **Repositorio Fork:** [Juan112021/mi_parcial_juanes](https://github.com/Juan112021/mi_parcial_juanes)
+- **Pull Request de Calificacion:** [PR #3 en g3in-unilasallista/mi_proyecto_python](https://github.com/g3in-unilasallista/mi_proyecto_python/pull/3)
+- **URL en Produccion (Render):** [https://mi-parcial-juanes.onrender.com/](https://mi-parcial-juanes.onrender.com/)
+- **Docente / Credito del Proyecto Base:** Ing. Feibert Alirio Guzman Perez (2026)
 
 ---
 
@@ -29,31 +44,32 @@ Aplicación web moderna, responsiva y modular desarrollada con **Python** y **Fl
 
 ```text
 parcial_juanes/
-|-- .gitignore                                 # Exclusión de temporales, caché y entorno virtual (.venv)
-|-- app.py                                     # Controlador principal y punto de entrada de la aplicación Flask
-|-- Procfile                                   # Especificación de arranque para la nube con servidor WSGI Gunicorn
-|-- README.md                                  # Documentación técnica completa y evidencias obligatorias
+|-- .gitignore                                 # Exclusion de temporales, cache y entorno virtual (.venv)
+|-- app.py                                     # Controlador principal y punto de entrada de la aplicacion Flask
+|-- Procfile                                   # Especificacion de arranque para Render con servidor WSGI Gunicorn
+|-- README.md                                  # Documentacion tecnica integral, enlaces y evidencias
 |-- requirements.txt                           # Dependencias del proyecto (Flask, Gunicorn)
+|-- subir_a_github.bat                         # Utilidad interactiva para sincronizacion Git
 |-- templates/
 |   `-- index.html                             # Vista principal (Dashboard, Navbar, Modo Claro/Oscuro y Quiz)
 `-- evidencias/
     |-- evidencia_ejecucion_local_venv.png     # Evidencia de entorno virtual .venv y servidor corriendo
     |-- evidencia_aplicacion_web_quiz.png      # Evidencia de la interfaz web en navegador y quiz
-    |-- evidencia_git_versionamiento.png       # Evidencia de ramas, commits y sincronización Git
-    `-- generar_evidencia.py                   # Script utilitario de generación de evidencias gráficas
+    |-- evidencia_git_versionamiento.png       # Evidencia de ramas, commits y sincronizacion Git
+    `-- generar_evidencia.py                   # Script utilitario de generacion de evidencias graficas
 ```
 
 ---
 
-## ACTIVIDAD 1: Fork del Repositorio y Clonación Local
+## ACTIVIDAD 1: Fork del Repositorio y Clonacion Local
 
-1. Se realizó el **Fork** del repositorio base [`g3in-unilasallista/mi_proyecto_python`](https://github.com/g3in-unilasallista/mi_proyecto_python) hacia la cuenta personal del estudiante en GitHub: [`Juan112021/mi_parcial_juanes`](https://github.com/Juan112021/mi_parcial_juanes).
-2. Se clonó el repositorio en la máquina de desarrollo:
+1. Se realizo el **Fork** del repositorio base [`g3in-unilasallista/mi_proyecto_python`](https://github.com/g3in-unilasallista/mi_proyecto_python) hacia la cuenta personal del estudiante: [`Juan112021/mi_parcial_juanes`](https://github.com/Juan112021/mi_parcial_juanes).
+2. Se clono el repositorio localmente para su desarrollo:
    ```bash
    git clone https://github.com/Juan112021/mi_parcial_juanes.git
    cd mi_parcial_juanes
    ```
-3. Se verificaron y vincularon los remotos de Git (`origin` apuntando al fork y `upstream` al repositorio original):
+3. Se vincularon los remotos de control de versiones (`origin` al fork personal y `upstream` al repositorio docente):
    ```bash
    git remote add upstream https://github.com/g3in-unilasallista/mi_proyecto_python.git
    git remote -v
@@ -61,15 +77,15 @@ parcial_juanes/
 
 ---
 
-## ACTIVIDAD 2: Configuración del Entorno Virtual (.venv) e Instalación
+## ACTIVIDAD 2: Configuracion del Entorno Virtual (.venv) e Instalacion
 
-Para asegurar el aislamiento de las librerías y la portabilidad del proyecto sin afectar el intérprete global del sistema operativo:
+Para garantizar el aislamiento de paquetes sin alterar el interprete global del sistema operativo:
 
-1. **Creación del entorno virtual aislado:**
+1. **Creacion del entorno virtual aislado:**
    ```bash
    python -m venv .venv
    ```
-2. **Activación del entorno virtual:**
+2. **Activacion del entorno virtual:**
    - En Windows PowerShell:
      ```powershell
      .\.venv\Scripts\Activate.ps1
@@ -78,11 +94,11 @@ Para asegurar el aislamiento de las librerías y la portabilidad del proyecto si
      ```bash
      source .venv/bin/activate
      ```
-3. **Instalación de las dependencias requeridas:**
+3. **Instalacion de dependencias requeridas:**
    ```bash
    pip install -r requirements.txt
    ```
-4. **Creación de la rama de trabajo semántica:**
+4. **Creacion de la rama de trabajo semantica:**
    ```bash
    git checkout -b feature/quiz-interactivo
    ```
@@ -91,148 +107,144 @@ Para asegurar el aislamiento de las librerías y la portabilidad del proyecto si
 
 ## ACTIVIDAD 3: EVIDENCIAS OBLIGATORIAS
 
-Esta sección contiene las evidencias visuales y técnicas de cumplimiento obligatorio exigidas en los lineamientos de la práctica evaluativa:
+Esta seccion compila las evidencias visuales y tecnicas requeridas en los criterios de evaluacion de la practica:
 
-### 3.1 Evidencia de Creación, Activación de `.venv` y Ejecución Local del Servidor Flask
-Muestra la terminal de PowerShell en la ruta del proyecto con el prefijo `(.venv)`, la validación de dependencias de `requirements.txt` y el servidor Flask ejecutándose activamente en modo depuración en `http://127.0.0.1:5000`:
+### 3.1 Evidencia de Creacion, Activacion de `.venv` y Ejecucion Local del Servidor Flask
+Captura de la terminal de PowerShell en la raiz del proyecto con el prefijo `(.venv)`, validacion de paquetes e inicio del servidor en modo depuracion:
 
-![Evidencia de ejecución local con .venv](evidencias/evidencia_ejecucion_local_venv.png)
+![Evidencia de ejecucion local con .venv](evidencias/evidencia_ejecucion_local_venv.png)
 
-- **Comando de inicio ejecutado:** `python app.py`
-- **Estado del servidor:** Activo en `http://127.0.0.1:5000` respondiendo con código HTTP `200 OK`.
-- **Intérprete activo:** Python 3.12 dentro del entorno virtual `.venv`.
+- **Comando ejecutado:** `python app.py`
+- **Estado del servidor:** Activo en `http://127.0.0.1:5000` con codigo HTTP `200 OK`.
+- **Interprete:** Python 3.12 aislado en `.venv`.
 
 ---
 
-### 3.2 Evidencia de la Aplicación Web en el Navegador con Nueva Estructura Visual y Modo Claro / Oscuro
-Muestra la aplicación web corriendo en el navegador local, presentando la nueva estructura en **Dashboard Dual-Column**, la barra superior (*portal navbar*), el conmutador dinámico de **Modo Claro / Modo Oscuro** (paleta Cosmic Indigo, Violet & Cyan / Pearl Alabaster), las métricas del stack, la tarjeta de presentación de **Juan Esteban Ospina Zapata** y el módulo del Quiz interactivo con retroalimentación positiva:
+### 3.2 Evidencia de la Aplicacion Web en el Navegador con Nueva Estructura Visual y Modo Claro / Oscuro
+Captura de la aplicacion en ejecucion local mostrando la nueva arquitectura visual tipo **Dashboard Dual-Column**, barra superior (*portal navbar*), conmutador de **Modo Claro / Modo Oscuro**, franja de metricas, identificacion de **Juan Esteban Ospina Zapata** y modulo evaluativo:
 
-![Evidencia de la aplicación web en el navegador con Quiz interactivo](evidencias/evidencia_aplicacion_web_quiz.png)
+![Evidencia de la aplicacion web en el navegador con Quiz interactivo](evidencias/evidencia_aplicacion_web_quiz.png)
 
-#### Características de la Nueva Estructura Visual:
+#### Componentes de la Nueva Estructura:
 1. **Barra Superior (*Portal Navbar*):**
-   - Logotipo de la institución con insignia animada.
-   - Indicador en vivo: `🟢 Servidor Flask Activo (Puerto 5000)`.
-   - Botón directo "Ficha de Autor" que despliega el modal pop-up de inicio.
-   - Botón alternador de **Modo Claro / Modo Oscuro** con persistencia en `localStorage`.
+   - Logotipo institucional con insignia interactiva.
+   - Indicador de estado: `Servidor Flask Activo (Puerto 5000)`.
+   - Acceso rapido a Ficha de Autor (modal emergente).
+   - Conmutador dinamico de Modo Claro y Modo Oscuro con persistencia en `localStorage`.
 2. **Columna Izquierda (Showcase & Arquitectura):**
-   - Tarjeta Hero principal con tipografía *Playfair Display* y degradados luminiscentes.
-   - Franja de métricas tecnológicas (*Python 3.12, Flask 3.1.3, Gunicorn Ready, Arquitectura Hexagonal*).
-   - 3 tarjetas de pilares técnicos (*Diseño Contemporáneo, Estructura Firme, Fluidez Visual*).
-   - Tarjeta interactiva del desarrollador (**Juan Esteban Ospina Zapata**).
-3. **Columna Derecha (Hub de Evaluación Interactiva):**
-   - Panel de evaluación con selección de opciones, comprobación en tiempo real y retroalimentación pedagógica.
+   - Tarjeta Hero con tipografia Playfair Display y degradados contemporaneos.
+   - Franja de metricas tecnicas (Python 3.12+, Flask 3.1.3, Gunicorn Ready, Arquitectura Hexagonal).
+   - 3 tarjetas de pilares tecnicos (Diseno Contemporaneo, Estructura Firme, Fluidez Visual).
+   - Tarjeta interactiva del estudiante desarrollador (**Juan Esteban Ospina Zapata**).
+3. **Columna Derecha (Hub de Evaluacion Interactiva):**
+   - Panel de evaluacion de 5 preguntas con navegador de pasos, retroalimentacion didactica y pantalla final.
 
 ---
 
-### 3.3 Evidencia del Módulo de Evaluación Interactiva (Quiz de 5 Preguntas sobre Arquitectura)
-El módulo evaluativo implementado cuenta con un banco completo de **5 preguntas de arquitectura y patrones de software**, con navegador de pasos (*stepper 1 a 5*), selección dinámica, explicaciones didácticas inmediatas, navegación secuencial y pantalla final de puntuación personalizada:
+### 3.3 Evidencia del Modulo de Evaluacion Interactiva (Quiz de 5 Preguntas sobre Arquitectura)
+El modulo evaluativo cuenta con un banco completo de **5 preguntas tecnicas sobre arquitectura de software**, con navegador secuencial (*stepper 1 a 5*), validacion instantanea, explicaciones teoricas y consolidacion de puntaje final:
 
 1. **Pregunta 1 (Arquitectura Hexagonal - Puertos y Adaptadores):**
-   - *Enfoque:* Desacoplar el núcleo de negocio (dominio puro) de las dependencias externas (bases de datos, APIs, UI) mediante contratos (puertos) e implementaciones (adaptadores).
-   - *Respuesta Correcta:* Opción A.
-2. **Pregunta 2 (Patrón MVC en Aplicaciones Flask):**
-   - *Enfoque:* Identificar el rol del Controlador en Flask (funciones con `@app.route()`) como receptor de peticiones HTTP, orquestador de servicios y despachador de la plantilla (Vista Jinja2).
-   - *Respuesta Correcta:* Opción B.
+   - *Enfoque:* Desacoplar el dominio del negocio de dependencias externas (bases de datos, APIs) mediante contratos (puertos) e implementaciones (adaptadores).
+   - *Respuesta Correcta:* Opcion A.
+2. **Pregunta 2 (Patron MVC en Aplicaciones Flask):**
+   - *Enfoque:* Funcion del Controlador en Flask (rutas con `@app.route()`) como receptor de peticiones HTTP, coordinador de logica y despachador de plantillas Jinja2.
+   - *Respuesta Correcta:* Opcion B.
 3. **Pregunta 3 (Monolito Modular vs. Microservicios):**
-   - *Enfoque:* Ventajas de simplificación operativa, menor sobrecarga de red y despliegue unificado (vía Gunicorn) con límites lógicos claros entre módulos para proyectos iniciales.
-   - *Respuesta Correcta:* Opción B.
+   - *Enfoque:* Ventajas de simplificacion operativa, menor latencia y despliegue unificado (via Gunicorn) manteniendo fronteras logicas limpias entre modulos.
+   - *Respuesta Correcta:* Opcion B.
 4. **Pregunta 4 (Principios SOLID & Clean Architecture - DIP):**
-   - *Enfoque:* Principio de Inversión de Dependencias (DIP), donde los módulos de alto nivel no dependen de los de bajo nivel, sino ambos de abstracciones e interfaces.
-   - *Respuesta Correcta:* Opción A.
-5. **Pregunta 5 (Servidores WSGI de Producción - Gunicorn):**
-   - *Enfoque:* Justificación del modelo pre-fork multiproceso de Gunicorn para manejar alta concurrencia y disponibilidad en la nube (Render) superando las limitaciones del servidor monoproceso `app.run()`.
-   - *Respuesta Correcta:* Opción B.
+   - *Enfoque:* Principio de Inversion de Dependencias (DIP), donde los modulos de alto y bajo nivel dependen de abstracciones e interfaces.
+   - *Respuesta Correcta:* Opcion A.
+5. **Pregunta 5 (Servidores WSGI de Produccion - Gunicorn):**
+   - *Enfoque:* Justificacion del modelo pre-fork multiproceso de Gunicorn para manejar alta concurrencia y disponibilidad en la nube (Render) superando el servidor monoproceso de desarrollo.
+   - *Respuesta Correcta:* Opcion B.
 
-- **Métricas y Pantalla Final:** Al culminar las 5 preguntas, el estudiante recibe su puntaje consolidado (`X / 5`), mensaje de reconocimiento para Juan Esteban Ospina Zapata y la opción de reiniciar la evaluación completa.
+- **Consolidacion y Puntaje:** Al completar las 5 preguntas se presenta la pantalla de resultados con el puntaje obtenido (`X / 5`), mensaje personalizado de reconocimiento a Juan Esteban Ospina Zapata y boton para reiniciar la evaluacion.
 
 ---
 
 ### 3.4 Evidencia de Control de Versiones en Git (Branch, Commits y Push Remoto)
-Muestra la terminal de Git con la rama de trabajo `feature/quiz-interactivo` activa, los remotos sincronizados con GitHub, el historial de commits semánticos y el árbol de trabajo limpio:
+Captura de la terminal de Git confirmando la rama `feature/quiz-interactivo`, historial de commits estandarizados y sincronizacion limpia hacia GitHub:
 
 ![Evidencia de control de versiones y Git](evidencias/evidencia_git_versionamiento.png)
 
-- **Rama de desarrollo:** `feature/quiz-interactivo`
-- **Sincronización:** `origin` en `https://github.com/Juan112021/mi_parcial_juanes.git`
-- **Commits semánticos:** Mensajes estandarizados bajo la convención *Conventional Commits* (`feat: ...`).
+- **Rama de trabajo:** `feature/quiz-interactivo`
+- **Sincronizacion remota:** `origin` en `https://github.com/Juan112021/mi_parcial_juanes.git`
+- **Commits semanticos:** Bajo estandar Conventional Commits (`feat: ...`).
 
 ---
 
 ## ACTIVIDAD 4: Diagrama del Pipeline de Trabajo (Flujo CI/CD & Gitflow)
 
-El siguiente diagrama modela el flujo continuo del ciclo de desarrollo seguido durante la realización del parcial:
+El siguiente esquema representa el ciclo completo de desarrollo y puesta en produccion:
 
 ```mermaid
 flowchart TD
     A[1. FORK del Repositorio Base\ng3in-unilasallista/mi_proyecto_python] --> B[2. CLONE al Entorno Local\nJuan112021/mi_parcial_juanes]
-    B --> C[3. CREACIÓN & ACTIVACIÓN\nEntorno Virtual .venv]
-    C --> D[4. INSTALACIÓN DE DEPENDENCIAS\npip install -r requirements.txt]
-    D --> E[5. CREACIÓN DE RAMA DE TRABAJO\ngit checkout -b feature/quiz-interactivo]
-    E --> F[6. DESARROLLO DEL FRONTEND\nNueva Estructura Dashboard, Modo Claro/Oscuro & Quiz]
-    F --> G[7. VERIFICACIÓN LOCAL\npython app.py en http://127.0.0.1:5000]
-    G --> H[8. GENERACIÓN DE EVIDENCIAS\nActividad 3 Obligatorias en /evidencias]
-    H --> I[9. CONFIRMACIÓN SEMÁNTICA\ngit commit -m 'feat: ...']
-    I --> J[10. SUBIDA AL REMOTO\ngit push origin feature/quiz-interactivo]
-    J --> K[11. PULL REQUEST EN GITHUB\nHacia g3in-unilasallista:main]
-    K --> L[12. DESPLIEGUE EN LA NUBE\nRender Web Service con Gunicorn]
+    B --> C[3. CREACION & ACTIVACION\nEntorno Virtual .venv]
+    C --> D[4. INSTALACION DE DEPENDENCIAS\npip install -r requirements.txt]
+    D --> E[5. CREACION DE RAMA DE TRABAJO\ngit checkout -b feature/quiz-interactivo]
+    E --> F[6. DESARROLLO DEL FRONTEND\nNueva Estructura Dashboard, Modo Claro/Oscuro & Quiz 5 Preguntas]
+    F --> G[7. VERIFICACION LOCAL\npython app.py en http://127.0.0.1:5000]
+    G --> H[8. GENERACION DE EVIDENCIAS\nActividad 3 Obligatorias en carpeta evidencias]
+    H --> I[9. CONFIRMACION SEMANTICA\ngit commit -m 'feat: ...']
+    I --> J[10. SUBIDA AL REMOTO\ngit push origin feature/quiz-interactivo & main]
+    J --> K[11. PULL REQUEST EN GITHUB\nPR #3 hacia g3in-unilasallista:main]
+    K --> L[12. DESPLIEGUE EN LA NUBE\nRender Web Service: https://mi-parcial-juanes.onrender.com/]
 ```
 
 ---
 
-## ACTIVIDAD 5: Despliegue en la Nube (Render) y Configuración WSGI
+## ACTIVIDAD 5: Despliegue en la Nube (Render) y Configuracion WSGI
 
-### Archivo de Configuración `Procfile`
-Para garantizar que la aplicación se ejecute en un servidor de producción robusto con manejo concurrente de peticiones, se definió el archivo `Procfile`:
+### URL de Acceso en Vivo
+- **Enlace de Produccion:** [https://mi-parcial-juanes.onrender.com/](https://mi-parcial-juanes.onrender.com/)
+
+### Archivo de Configuracion `Procfile`
+Para garantizar que la aplicacion se ejecute bajo un servidor WSGI de produccion con soporte para multiples peticiones concurrentes:
 ```text
 web: gunicorn app:app
 ```
 
-### Justificación de Gunicorn
-El servidor de desarrollo integrado de Flask (`Werkzeug`) es de un solo hilo y está concebido exclusivamente para desarrollo local. Para producción en la nube (Render), **Gunicorn** actúa como un servidor WSGI de alto rendimiento basado en el modelo pre-fork de procesos de UNIX, capaz de manejar múltiples workers en paralelo con aislamiento ante fallos y reinicios automáticos.
+### Justificacion de Gunicorn
+El servidor integrado de desarrollo de Flask (`Werkzeug`) es de un solo hilo y no cuenta con tolerancia a fallos ni balanceo de carga. **Gunicorn** actua como servidor HTTP WSGI basado en un modelo pre-fork de workers en UNIX, permitiendo atender multiples solicitudes simultaneas de manera eficiente, segura y escalable en la infraestructura de Render.
 
-### Pasos de Despliegue en Render:
-1. Iniciar sesión en [Render.com](https://render.com) vinculando la cuenta de GitHub.
-2. Hacer clic en **New +** y seleccionar **Web Service**.
-3. Vincular el repositorio del estudiante: `Juan112021/mi_parcial_juanes`.
-4. Diligenciar los parámetros de despliegue:
-   - **Name:** `mi-parcial-juanes`
-   - **Environment:** `Python 3`
-   - **Branch:** `feature/quiz-interactivo` (o `main`)
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `gunicorn app:app`
-5. Seleccionar el plan **Free** y presionar **Create Web Service**.
-6. Render generará la URL pública HTTPS protegida con certificado SSL para el acceso global.
+### Parametros de Configuracion en Render:
+- **Service Type:** Web Service
+- **Name:** `mi-parcial-juanes`
+- **Region:** US West / Oregon (o predeterminada)
+- **Branch:** `main`
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `gunicorn app:app`
+- **Instance Type:** Free ($0 / month)
 
 ---
 
-## Selección de Stack y Justificación de Arquitectura
+## Estado del Pull Request Oficial
 
-| Componente | Tecnología | Justificación Técnica |
+> [!IMPORTANT]
+> El Pull Request formal de calificacion ya fue presentado ante el repositorio del docente:
+> - **Numero de Pull Request:** [PR #3](https://github.com/g3in-unilasallista/mi_proyecto_python/pull/3)
+> - **Titulo:** `Pull Juan Esteban Ospina`
+> - **Repositorio Destino:** `g3in-unilasallista/mi_proyecto_python` (Rama `main`)
+> - **Repositorio Origen:** `Juan112021/mi_parcial_juanes` (Rama `main` / `feature/quiz-interactivo`)
+> - **Estado:** Abierto y listo para revision docente.
+
+---
+
+## Seleccion de Stack y Justificacion de Arquitectura
+
+| Componente | Tecnologia | Justificacion Tecnica |
 | :--- | :--- | :--- |
-| **Backend / WSGI** | Python 3.12+ / Flask 3.1.3 | Simplicidad operativa, ligereza computacional y desacoplamiento limpio entre rutas y vistas. |
-| **Frontend** | HTML5 Semántico + CSS3 Variables + Vanilla JS | Rendimiento nativo sin dependencias externas pesadas, arquitectura glassmorphism moderna y soporte de temas claro/oscuro. |
-| **Persistencia de Preferencias** | `localStorage` API | Almacenamiento local del tema elegido por el usuario que perdura entre recargas sin sobrecargar la base de datos. |
-| **Servidor de Producción** | Gunicorn WSGI | Servidor HTTP multiproceso robusto que asegura alta disponibilidad en la nube. |
-| **Estilo Arquitectónico** | Monolito Modular con Principios Hexagonales | Separación nítida de responsabilidades; el controlador (`app.py`) despacha la presentación mientras la interfaz implementa validaciones desacopladas. |
-
----
-
-## Descripción Creativa para el Pull Request
-
-> **Título del Pull Request:**  
-> `feat: nueva estructura visual dashboard, modo claro/oscuro, quiz sobre arquitectura hexagonal y evidencias obligatorias`
->
-> **Descripción:**  
-> Estimado profesor Ing. Feibert Alirio Guzmán Pérez:  
-> Como parte de la evaluación práctica de **Ingeniería de Software II**, presento esta propuesta de enriquecimiento integral para la aplicación Flask desarrollada por **Juan Esteban Ospina Zapata**.  
->  
-> Esta versión evoluciona la interfaz original transformándola en un **Dashboard Dual-Column** de vanguardia con barra de navegación superior, soporte fluido y persistente para **Modo Claro / Modo Oscuro**, métricas del stack tecnológico, tarjeta interactiva de autoría con modal pop-up de inicio y un **módulo interactivo de Quiz** sobre el patrón de Arquitectura Hexagonal (Puertos y Adaptadores) con retroalimentación didáctica inmediata.  
->  
-> Asimismo, se documenta minuciosamente la **Actividad 3 con todas las evidencias obligatorias** (ejecución con `.venv`, visualización en navegador y control de versiones en Git) y se deja configurado el despliegue a la nube mediante `Procfile` y Gunicorn.
+| **Backend / WSGI** | Python 3.12+ / Flask 3.1.3 | Simplicidad operativa, ejecucion ligera y separacion nítida entre rutas y vistas. |
+| **Frontend** | HTML5 Semantico + CSS3 Variables + Vanilla JS | Maximo rendimiento nativo sin frameworks pesados, diseno glassmorphism y soporte de temas. |
+| **Persistencia de Preferencias** | `localStorage` API | Almacenamiento local del tema seleccionado por el usuario entre recargas de pagina. |
+| **Servidor de Produccion** | Gunicorn WSGI | Servidor concurrente multiproceso para alta disponibilidad en Render. |
+| **Estilo Arquitectonico** | Monolito Modular con Principios Hexagonales | Organizacion desacoplada; el backend despacha la vista mientras la logica del cliente valida la evaluacion. |
 
 ---
 
 ## Licencia
 
-Este proyecto se distribuye bajo los términos de la licencia **MIT**. Consulte el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto se distribuye bajo los terminos de la licencia **MIT**. Consulte el archivo [LICENSE](LICENSE) para mas detalles.
